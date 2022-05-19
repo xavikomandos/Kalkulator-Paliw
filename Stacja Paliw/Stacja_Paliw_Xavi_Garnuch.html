@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paliwko Benc Benc Tego Typu</title>
+    <link rel="stylesheet" href="..//Stacja Paliw/css dla garnochow.css" type="text/css">
+</head>
+<body>
+    <h1>Stacja Paliw Xavi Garnuch</h1>
+    <div>
+        <input id="Pb" type="radio" name="xavi" value="kaiser">
+        <label for="Pb">Benzyna Pb</label>
+        <input id="ON" type="radio" name="xavi" value="kaiser">
+        <label for="ON">Diesel ON</label>
+
+    </div>
+    <div>
+        <p>Ile litrów</p>
+        <input type="text" id="paliwen">
+        <button onclick="deutsch()">Suma</button>
+    </div>
+    <div>
+        <p>Cena wynosi:</p>
+        <p id="pilsistsehrgut"></p>
+    </div>
+    <script>
+        function deutsch() {
+            var bagno = document.getElementById("paliwen").value;
+            let tego = document.getElementById("Pb").checked;
+            let Typu = document.getElementById("ON").checked;
+            if (tego == true) {
+                let Cena = bagno * 6.7;
+                document.getElementById("pilsistsehrgut").innerHTML = Cena + " PLN"
+            }
+            else if (Typu == true) {
+                let Cena = bagno * 7.5;
+                document.getElementById("pilsistsehrgut").innerHTML = Cena + " PLN"
+            }
+        }
+        </script>
+</body>
+</html>
